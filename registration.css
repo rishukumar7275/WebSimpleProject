@@ -1,0 +1,16 @@
+.register-background{
+    background-color: black;
+    margin: 5%;
+}
+legend{
+    text-align: center;
+    display: block;
+    border: none;
+}
+span{
+    margin-left: 40px;
+}
+.go-back:hover{
+    font-size: 15px;
+    margin: 0px;
+}
