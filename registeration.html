@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registeration</title>
+    <link rel="icon" href="img/virtua-clinic-logo-icon.png">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="node_modules/sweetalert2/dist/sweetalert2.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+    <link rel="stylesheet" href="css/registration.css">
+    <script type="text/javascript" src="js/register.js"></script>
+</head>
+<body class="register-background">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <form class="well form-horizontal" action="" method="post" id="registerform">
+                    <fieldset>
+                        <legend>Registeration Form</legend>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">
+                                First Name :
+                            </label>
+                            <div class="col-md-3">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-user"></i>
+                                    </span>
+                                    <input name="first_name" id="first_name" placeholder=" First Name" class="form-control" onclick="return " type="text">
+                                </div>
+                                <span class="error-First-Name" id="errorFirstName"></span>
+                            </div>
+                            <label class="col-md-2 control-label">
+                                Last Name :
+                            </label>
+                            <div class="col-md-3">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-user"></i>
+                                    </span>
+                                    <input name="last_name" id="last_name" placeholder=" Last Name" class="form-control" type="text">
+                                </div>
+                                <span class="error-Last-Name" id="errorLastName"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">
+                                E-mail Id :
+                            </label>
+                            <div class="col-md-8">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-envelope"></i>
+                                    </span>
+                                    <input name="email" id="email" placeholder=" abc@xyz.com" class="form-control" type="text">
+                                </div>
+                                <span class="error-Email" id="errorEmail"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">
+                                Mobile No :
+                            </label>
+                            <div class="col-md-8">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-phone"></i>
+                                    </span>
+                                    <input name="mobile" id="mobile" placeholder=" 9876543210" class="form-control" type="text">
+                                </div>
+                                <span class="error-Mobile" id="errorMobile"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">
+                                Password :
+                            </label>
+                            <div class="col-md-8">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-key"></i>
+                                    </span>
+                                    <input name="password" id="password" class="form-control" type="password">
+                                </div>
+                                <span class="error-Password" id="errorPassword"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">
+                                Confirm Password :
+                            </label>
+                            <div class="col-md-8">
+                                <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-key"></i>
+                                        </span>
+                                    <input name="confirmpassword" id="confirmpassword" class="form-control" type="password">
+                                </div>
+                                <span class="error-Confirm-Password" id="errorConfirmPassword"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">
+                                Profession :
+                            </label>
+                            <div class="col-md-5">
+                                <select class="form-control" name="select_profession" id="select_profession">
+                                    <option value="-1">-- Select an option --</option>
+                                    <option value="Doctor">Doctor</option>
+                                    <option value="Professor">Professor</option>
+                                    <option value="Scientist">Scientist</option>
+                                    <option value="Student">Student</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <span class="error-Select" id="errorSelect"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-3">
+                                <button type="submit" onclick="return registrationValidation()" class="form-control btn btn-success">Create Your Account</button>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="index.html" class="form-control btn btn-primary" onclick="navigateToHome()"><i class="fa fa-angle-double-left" aria-hidden="true"></i><i class=""> Go back to homepage</i></a>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+</body>
+</html>

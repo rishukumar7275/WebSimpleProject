@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Virtual Clinic</title>
+    <link rel="icon" href="img/virtua-clinic-logo-icon.png">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class=" navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"  style="padding: 0px; !important; opacity: 1.0; !important;"><img src="img/virtua-clinic-logo-final.png" class="img-responsive" alt="logo"></a>
+        </div>
+        <!--nav links,and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="#"><span class="font">Home</span></a></li>
+                <li><a href="#"><span class="font">About Us</span></a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false"><span class="font">Features <i class="glyphicon glyphicon-chevron-down"
+                                                                            aria-hidden="true"></i></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" class="font">Appointments</a></li>
+                        <li><a href="#clinic" class="font">Clinic</a></li>
+                        <li><a href="#" class="font">Emergency</a></li>
+                        <li><a href="#" class="font">Find Nearest Doctor</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false"><span class="font">Components <i
+                            class="glyphicon glyphicon-chevron-down"></i></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#component" class="font">Physiologists</a></li>
+                        <li><a href="#component" class="font">Primary Care</a></li>
+                        <li><a href="#component" class="font">Gynaecologists</a></li>
+                        <li><a href="#component" class="font">Cardiologists</a></li>
+                        <li><a href="#component" class="font">Opthalmology</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false"><span class="font">Departments <i
+                            class="glyphicon glyphicon-chevron-down"></i></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#departments" class="font">Physiologists</a></li>
+                        <li><a href="#departments" class="font">Dermatologists</a></li>
+                        <li><a href="#departments" class="font">Gynaecologists</a></li>
+                        <li><a href="#departments" class="font">Cardiologists</a></li>
+                        <li><a href="#departments" class="font">Diabetics</a></li>
+                        <li><a href="#departments" class="font">Anesthesiologist</a></li>
+                        <li><a href="#departments" class="font">Neurologist</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contact"><span class="font">Contact</span></a></li>
+                <li style="padding-top: 8px">
+                    <button href="#" class="btn btn-danger" data-toggle="modal" data-target="#login-modal"><i class="glyphicon glyphicon-user"></i> SignIn/Register</button>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" align="center">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                </button>
+            </div>
+            <!-- Begin # DIV Form -->
+            <div id="div-forms">
+                <!-- Begin # Login Form -->
+                <form action="dashboard.html" method="post" id="login-form">
+                    <div class="modal-body login-fields">
+                        <div class="field">
+                            <input type="text" id="login_username" class="form-control login username-field" placeholder="Username" name="username" required>
+                        </div>
+                        <div class="field">
+                            <input id="login_password" name="password" class="form-control login password-field" type="password" placeholder="Password" required>
+                            <span id="msg"></span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="col-md-6">
+                            <button type="submit" onclick="return check()" class="btn btn-success btn-primary btn-lg btn-block">Login</button>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="registeration.html" class="btn btn-primary btn-lg btn-block">Register</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div><div class="line-break"></div>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="img/slide1.jpg" class="img-rounded img-fluid" alt="Image1">
+        </div>
+        <div class="item">
+            <img src="img/slide2.jpg" class="img-rounded img-fluid" alt="Image2">
+        </div>
+        <div class="item">
+            <img src="img/slide3.jpg" class="img-rounded img-fluid" alt="Image3">
+        </div>
+    </div>
+    <!--Carousel controls-->
+    <!--&lt;!&ndash; Left and right controls &ndash;&gt;
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+        <span class="sr-only">Next</span>
+    </a>-->
+</div>
+<div class="about">
+    <div class="about-content center style-font">
+        About Us
+    </div>
+    <div class="">
+        
+    </div>
+</div>
+<div class="card-background">
+    <div class="style-font center" id="clinic">
+        The Clinic
+    </div>
+    <div class="line-break"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 col-lg-3">
+                <div class="card">
+                    <div class="card-style" style="margin-bottom: 5px">
+                        <span class="img-circle card-glyph"><i class="fa fa-plus-square"></i></span>
+                    </div>
+                    <div class="card-content">Medicos</div>
+                    <div class="no-margin"
+                         style="font-size: 100%; height: 140px; padding: 25px; font-family: Helvetica, Arial, sans-serif;font-weight: 600">
+                        Medicos provides a fresh perspective.
+                        Dr. Park in addition to writing
+                        his blog, is also the author of a book,
+                        Sleep Interrupted
+                    </div>
+                    <div class="center">
+                        <button class="btn hover-button"><span style="padding-right: 5px">Read More <i
+                                class="fa fa-angle-double-right"></i></span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-lg-3">
+                <div class="card">
+                    <div class="card-style" style="margin-bottom: 5px">
+                        <span class="img-circle card-glyph"><i class="fa fa-ambulance"></i></span>
+                    </div>
+                    <div class="card-content">Ambulance Service</div>
+                    <div class="no-margin"
+                         style="height: 45%; padding: 25px; font-size: 100%; font-family: Helvetica, Arial, sans-serif;font-weight: 600">
+                        Ambulance Vehicles: Ambulance AC
+                        Tempo Traveller Ambulance Non/AC
+                        Tempo Traveller Ambulance Omni
+                        Ambulance ECO A/c Freezer Fitted
+                        Ambulance Air ...
+                    </div>
+                    <div class="center">
+                        <button class="btn hover-button"><span style="padding-right: 5px">Book Ambulance <i
+                                class="fa fa-angle-double-right"></i></span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-lg-3">
+                <div class="card ">
+                    <div class="card-style" style="margin-bottom: 5px">
+                        <span class="img-circle card-glyph"><i class="fa fa-user-md"></i></span>
+                    </div>
+                    <div class="card-content">
+                        Medical Team
+                    </div>
+                    <div class="no-margin"
+                         style="height: 45%; padding: 25px; font-size: 100%; font-family: Helvetica, Arial, sans-serif;font-weight: 600">
+                        The group of physicians and
+                        healthcare workers who are
+                        responsible for a patient's
+                        medical needs while the patient
+                        is in hospital and during a
+                    </div>
+                    <div class="center">
+                        <button class="btn hover-button"><span style="padding-right: 5px">Book Ambulance <i
+                                class="fa fa-angle-double-right"></i></span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-lg-3">
+                <div class="card ">
+                    <div class="card-style" style="margin-bottom: 5px">
+                        <span class="img-circle card-glyph"><i class="fa fa-medkit"></i></i></span>
+                    </div>
+                    <div class="card-content">
+                        Medical Kit
+                    </div>
+                    <div class="no-margin"
+                         style="height: 45%; padding: 25px; font-size: 100%; font-family: Helvetica, Arial, sans-serif;font-weight: 600">
+                        24 *7 Medical Kit available
+                        with fully generic medicines
+                        and with full equipped kits
+                        First aid kits and survival
+                        tools or other medicine, for
+                        family outings, and travel.
+                    </div>
+                    <div class="center">
+                        <button class="btn hover-button"><span style="padding-right: 5px">Take Your Kit <i
+                                class="fa fa-angle-double-right"></i></span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="line-break"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="locate-your-doctor">
+            <span class="head-local" id="departments"><i class="fa fa-stethoscope"></i> Find Your Doctor</span>
+            <div class="content-local">
+                <ul class="list-inline">
+                    <li class="list-inline-content"><a href="#">Physiologists</a></li>
+                    <li class="list-inline-content"><a href="#">Dermatologists</a></li>
+                    <li class="list-inline-content"><a href="#">Gynaecologists</a></li>
+                    <li class="list-inline-content"><a href="#">Cardiologists</a></li>
+                    <li class="list-inline-content"><a href="#">Diabetics</a></li>
+                    <li class="list-inline-content"><a href="#">Anesthesiologist</a></li>
+                    <li class="list-inline-content"><a href="#">Neurologist</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="separtor"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="heading-activities" id="component">Components</div>
+            <div class="separtor"></div>
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <span class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                               aria-expanded="true" aria-controls="collapseOne">
+                               <i class="fa fa-male" aria-hidden="true" style="padding-right: 7px"></i> Physiologists
+                            </a>
+                        </span>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
+                         aria-labelledby="headingOne">
+                        <div class="panel-body">
+                            Physiology is the scientific study of normal mechanisms, and their interactions, which works within a living system
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <span class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                               href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <i class="fa fa-medkit" aria-hidden="true" style="padding-right: 7px"></i> Primary Care
+                            </a>
+                        </span>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+Primary care is the day-to-day healthcare given by a health care provider. Typically this provider acts as the first contact and principal point of continuing care for patients within a healthcare
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                        <span class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                               href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                               <i class="fa fa-female" aria-hidden="true" style="padding-right: 7px"></i> Gynaecologists
+                            </a>
+                        </span>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
+                         aria-labelledby="headingThree">
+                        <div class="panel-body">
+                            Gynaecology or gynecology is the medical practice dealing with the health of the female reproductive systems and the breasts. Literally, outside medicine, the term means "the science of women"
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingFour">
+                        <span class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                               href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                               <i class="fa fa-heart" aria-hidden="true" style="padding-right: 7px"></i> Cardiologists
+                            </a>
+                        </span>
+                    </div>
+                    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel"
+                         aria-labelledby="headingThree">
+                        <div class="panel-body">
+                            Cardiology is a branch of medicine dealing with disorders of the heart as well as parts of the circulatory system
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingFive">
+                        <span class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                               href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                <i class="fa fa-eye" aria-hidden="true" style="padding-right: 7px"></i> Opthalmology
+                            </a>
+                        </span>
+                    </div>
+                    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel"
+                         aria-labelledby="headingThree">
+                        <div class="panel-body">
+                            Ophthalmology is the branch of medicine that deals with the anatomy, physiology and diseases of the eyeball. An ophthalmologist is a specialist in medical and surgical eye problems
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="heading-activities">Extra Activities</div>
+             <div style="padding-top: 25px">
+                <div id="carousel-example" class="carousel slide hidden-xs" data-ride="carousel">
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <div class="col-md-4">
+                                <div class="col-item">
+                                    <div class="photo">
+                                        <img src="img/research-and-development.jpg" class="img-responsive img-rounded" alt="a"/>
+                                    </div>
+                                    <div class="info">
+                                        <div class="images-product-old">
+                                            <div class="product-old">
+                                                <div class="img-circle-head">
+                                                    Research and Developement</div>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="col-item">
+                                    <div class="photo">
+                                        <img src="img/Medical-seminar.jpg" class="img-responsive img-rounded" alt="a"/>
+                                    </div>
+                                    <div class="info">
+                                        <div class="images-product-old">
+                                            <div class="product-old">
+                                                <div class="img-circle-head">
+                                                    Medical Seminar</div>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="col-item">
+                                    <div class="photo">
+                                        <img src="img/medical-education.jpg" class="img-responsive img-rounded" alt="a"/>
+                                    </div>
+                                    <div class="info">
+                                        <div class="images-product-old">
+                                            <div class="product-old">
+                                                <div class="img-circle-head">
+                                                    Medical Education</div>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </div>
+</div>
+<div class="line-break"></div>
+<div class="container-fluid card-background">
+    <div class="head-contact style-font center contact" id="contact">Contact Us</div>
+    <div class="row">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="contact-address-head">Contact <span class="style-font">Address</span></div>
+                    <div class="contact-address-content">
+                        <div class="line-break"></div>
+                        <i class="fa fa-location-arrow" aria-hidden="true"></i> Varanasi, 221001<div></div>
+                        <i class="fa fa-mobile" aria-hidden="true"></i> (+91) - 7398616089<div></div>
+                        <i class="fa fa-envelope-o" aria-hidden="true"></i> <i>kumar.rishabh85@gmail.com</i>
+                    </div>
+                </div>
+                <div class="col-md-4"></div>
+                <div class="col-md-3">
+                    <div class="contact-form-head">Contact Form</div>
+                    <div class="line-break"></div>
+                    <div class="contact-form-content">
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label class="sr-only" for="exampleInputName"></label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="exampleInputName" placeholder="Name">
+                                    <div class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="exampleInputEmail"></label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="exampleInputEmail" placeholder="E-mail">
+                                    <div class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="exampleInputMessage"></label>
+                                <div class="input-group">
+                                    <textarea class="form-control" id="exampleInputMessage" placeholder="Message" rows="3" cols="50"></textarea>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-default" style="background-color: #2aa4a5;color: white;margin-left: -15px;font-weight: 400;font-size: medium">Default</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="line-break"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-5 footer">All copyrights reserved &copy; 2017 virtual clinic</div>
+            <div class="col-md-6"></div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
